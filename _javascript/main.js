@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   const LANGUAGE = "fr";
-  const searchUrl = (query) => `/search.json?q=${query}`
-  const fightUrl = (query) => `/result.json`
+  const searchUrl = (query) => `search.json?q=${query}`
+  const fightUrl = (query) => `result.json`
   document.querySelectorAll(".pokemon-input.pokemon-name").forEach((element) => {
     element.addEventListener('input', (event) => {
       searchPokemon(event.target)
