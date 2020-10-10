@@ -1,0 +1,17 @@
+[
+    {
+        "name": "Bulbizarre",
+        "id": 1,
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"
+    },
+    {
+        "name": "Salamèche",
+        "id": 4,
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png"
+    },
+    {
+        "name": "Carapuce",
+        "id": 7,
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png"
+    }
+]

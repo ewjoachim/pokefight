@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pokefight</title>
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+    <section class="hero is-small is-light">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title has-text-centered">Pokefight!</h1>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="tile is-ancestor">
+
+          <div class="tile is-parent is-5 pokemon-choice-tile" data-side="left">
+            <div class="tile is-child notification notification--centered is-danger">
+              <div class="field is-grouped">
+                <div class="control is-expanded">
+                  <input class="input pokemon-input pokemon-name is-danger is-large mb-4"
+                  type="text" placeholder="Type pokemon name">
+                </div>
+                <div class="control">
+                  <input class="input pokemon-input pokemon-level is-danger is-large mb-4"
+                  type="text" placeholder="lvl">
+                </div>
+              </div>
+                <div class="tile is-ancestor search-results"></div>
+            </div>
+          </div>
+
+          <div class="tile is-vertical  is-2">
+            <div class="tile is-parent">
+              <h2 class="tile is-child title is-center"><a class="fight-button">vs</a></h2>
+            </div>
+            <div class="tile is-parent is-hidden winner-tile">
+              <div class="tile is-child">
+                <p class="is-center is-size-3 winner-name"></p>
+                <p class="is-center is-size-3 winner-emoji"></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="tile is-parent is-5 pokemon-choice-tile" data-side="right">
+            <div class="tile is-child notification notification--centered is-info">
+              <div class="field is-grouped">
+                <div class="control is-expanded">
+                  <input class="input pokemon-input pokemon-name is-info is-large mb-4"
+                  type="text" placeholder="Type pokemon name">
+                </div>
+                <div class="control">
+                  <input class="input pokemon-input pokemon-level is-info is-large mb-4"
+                  type="text" placeholder="lvl">
+                </div>
+              </div>
+                <div class="tile is-ancestor search-results"></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <footer class="footer has-text-centered fix-footer">
+      <div class="container">
+         <div class="columns">
+          <div class="column">
+            <p>
+              <strong class="has-text-weight-semibold">
+                Built with Python & Bulma
+              </strong>
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script type="text/javascript" src="lib/main.js"></script>
+    <template class="pokemon-choice">
+      <div class="tile is-parent is-4 search-result" data-pokemon-id="">
+        <a role="button" class="tile is-child">
+          <div class="card">
+            <div class="card-image">
+              <figure class="image is-square">
+                <img class="pokemon-button-image" src="" alt="">
+              </figure>
+            </div>
+            <div class="card-content">
+              <div class="content has-text-centered pokemon-button-name"></div>
+            </div>
+          </div>
+        </div>
+      </a>
+    </template>
+  </body>
+</html>
