@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
     element.addEventListener('input', function (event) {
       searchPokemon(event.target);
     });
+    searchPokemon(element);
   });
   async function searchPokemon(element) {
     var headers = new Headers({ "Accept-Language": LANGUAGE });

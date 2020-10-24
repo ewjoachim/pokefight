@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Pokefight</title>
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    <link rel="shortcut icon"
+      href="{{ url_for('static', filename='favicon.ico') }}">
   </head>
   <body>
     <section class="hero is-small is-light">
@@ -33,7 +35,7 @@
 
           <div class="tile is-vertical  is-2">
             <div class="tile is-parent">
-              <h2 class="tile is-child title is-center"><a class="fight-button">vs</a></h2>
+              <h2 class="tile is-child title is-center"><button class="button fight-button">vs</button></h2>
             </div>
             <div class="tile is-parent is-hidden winner-tile">
               <div class="tile is-child">
@@ -71,7 +73,7 @@
         </div>
       </div>
     </footer>
-    <script type="text/javascript" src="lib/main.js"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='main.js') }}"></script>
     <template class="pokemon-choice">
       <div class="tile is-parent is-4 search-result" data-pokemon-id="">
         <a role="button" class="tile is-child">
