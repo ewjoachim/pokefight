@@ -6,6 +6,8 @@ document.addEventListener('DOMContentLoaded', () => {
     element.addEventListener('input', (event) => {
       searchPokemon(event.target)
     })
+    searchPokemon(element)
+
   })
   async function searchPokemon(element) {
     const headers = new Headers({ "Accept-Language": LANGUAGE });
