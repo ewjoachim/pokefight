@@ -19,7 +19,7 @@ def home():
 def search():
     language = flask.request.headers.get("Accept-Language", "en")
 
-    if language not in ["en", "fr"]:
+    if language not in magic.SUPPORTED_LANGUAGES:
         language = "en"
 
     database = list(magic.POKE_DATABASE[language].values())
