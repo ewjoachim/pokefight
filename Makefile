@@ -1,15 +1,22 @@
-isort:
-	isort .
+install:
+	pip install -r requirements.txt
 
-isort-check:
-	isort -c .
+install-dev:
+	pip install -r dev-requirements.txt
 
-black:
-	black .
+static-watch:
+	npm run start
 
-black-check:
+static-deploy:
+	npm run deploy
+
+serve:
+	FLASK_APP=pokefight/app.py flask run --reload
+
+lint:
+	isort --check .
 	black --check .
 
-lint: isort black
-
-lint-check: isort-check black-check
+format:
+	isort .
+	black .
