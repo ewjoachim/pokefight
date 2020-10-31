@@ -1,5 +1,5 @@
 import flask
-import pandas as pd
+import pandas
 from fuzzywuzzy import process
 
 from pokefight import magic
@@ -47,13 +47,13 @@ def fight():
     pokemon_left = magic.get_pokemon_row(id=data["left"]["id"])
     pokemon_right = magic.get_pokemon_row(id=data["right"]["id"])
 
-    df = pd.DataFrame(
+    dataframe = pandas.DataFrame(
         data=[[pokemon_left, pokemon_right]],
         columns=["First_pokemon", "Second_pokemon"],
     )
-    X = magic.preprocess_test_data(df).values
+    row = magic.preprocess_test_data(dataframe).values
 
-    if magic.POKEMON_MODEL.predict(X)[0]:
+    if magic.POKEMON_MODEL.predict(row)[0]:
         result = "left"
     else:
         result = "right"
